@@ -2,10 +2,10 @@
 
 **UNDER CONSTRUCTION**
 
-| |Cartesian|Delta|
-|---|---|---|
-velocity / acceleration|higher number of movable parts -> high inertia; axis have different inertia -> max v&a is different for every axis| moved mass / number of movable parts small -> small inertia -> relatively high printing speed possible|
-|accuracy | | |
+|	criterion	| Cartesian	| Delta |
+| ----- | --------- | ----- |
+| velocity / acceleration | higher number of movable parts<br/>&emsp;&#8594; high inertia<br/>&emsp;&#8594; max v & a is different for every axis | moved mass / number of movable parts small<br/>&emsp;&#8594; small inertia<br/>&emsp;&#8594; relatively high printing speed possible |
+| accuracy | | |
 
 
 **UNDER CONSTRUCTION**
