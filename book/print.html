@@ -47,7 +47,7 @@
         </script>
 
         <div id="sidebar" class="sidebar">
-            <ul class="chapter"><li><a href="project_description.html"><strong>1.</strong> Project</a></li><li><a href="shopping_list.html"><strong>2.</strong> Shopping List</a></li><li><a href="cartesian_vs_delta.html"><strong>3.</strong> Cartesian vs Delta</a></li><li><a href="filament.html"><strong>4.</strong> Filament</a></li></ul>
+            <ul class="chapter"><li><a href="project/description.html"><strong>1.</strong> Project</a></li><li><ul class="section"><li><a href="project/idea.html"><strong>1.1.</strong> Idea</a></li></ul></li><li><a href="design/design.html"><strong>2.</strong> Design</a></li><li><ul class="section"><li><a href="design/cartesian_vs_delta.html"><strong>2.1.</strong> Cartesian vs Delta</a></li></ul></li><li><a href="materials/materials.html"><strong>3.</strong> Materials</a></li><li><ul class="section"><li><a href="materials/shopping_list.html"><strong>3.1.</strong> Shopping List</a></li><li><a href="materials/filament.html"><strong>3.2.</strong> Filament</a></li></ul></li></ul>
         </div>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -72,29 +72,22 @@
 <p>We don't have any/much experience in building one.
 So this is more of a learning experience for us than creating the worlds most awesome printer.</p>
 <p>TODO</p>
-<h1>Shopping List</h1>
-<p>This is a list of all required physical items.</p>
-<table><thead><tr><td>       Item name           </td><td>   Purchase Price  </td><td>   Amount  </td></tr></thead>
-<tr><td> rod (linear bearing)      </td><td>                   </td><td>           </td></tr>
-<tr><td> frame (profile bar)       </td><td>                   </td><td>           </td></tr>
-<tr><td> engine                    </td><td>                   </td><td>       4   </td></tr>
-<tr><td> cardan joint (delta)      </td><td>                   </td><td>           </td></tr>
-<tr><td> hot end                   </td><td>                   </td><td>           </td></tr>
-<tr><td> linear bearing            </td><td>                   </td><td>           </td></tr>
-<tr><td> belt incl. gear wheel     </td><td>                   </td><td>           </td></tr>
-<tr><td> base plate (heated)       </td><td>                   </td><td>           </td></tr>
-<tr><td> sensors                   </td><td>                   </td><td>           </td></tr>
-<tr><td> Arduino                   </td><td>                   </td><td>           </td></tr>
-<tr><td> engine controllers        </td><td>                   </td><td>       4   </td></tr>
-<tr><td> power supply              </td><td>                   </td><td>           </td></tr>
-<tr><td> Raspberry Pi + SD card    </td><td>                   </td><td>           </td></tr>
-<tr><td> acrylic glass (wall)      </td><td>                   </td><td>           </td></tr>
-<tr><td> fan                       </td><td>                   </td><td>           </td></tr>
-<tr><td> filament (ABS/PLA)        </td><td>                   </td><td>           </td></tr>
-<tr><td> cable                     </td><td>                   </td><td>           </td></tr>
-<tr><td> bowden tube (delta)       </td><td>                   </td><td>           </td></tr>
-<tr><td> screw                     </td><td>                   </td><td>           </td></tr>
-</table>
+<h1>Idea</h1>
+<p>TODO</p>
+<p>Because we use multiple Operating Systems we wanted to make the Printer Software 'Platform independent'.
+This leaves us with 2 Options:</p>
+<ul>
+<li>Use Cross-Platform Libraries for the Gui, ...</li>
+<li>Use a Website which allows the user to upload the file he/she wants to get printed</li>
+</ul>
+<p>We chose Option 2 because:</p>
+<ul>
+<li>Every OS should have an Browser to access the site <br/> → Every OS with a (modern) Browser may</li>
+<li>There is no need for backwards compatibility. <br/> → Admins must update the software on the pi once instead of updating the users software/force the user to update the software</li>
+</ul>
+<p>For a more detailed Reason see <a href="design/design.html">Design</a></p>
+<h1>Design</h1>
+<p>TODO</p>
 <h1>Pro and contra list between a cartesian and a delta printer</h1>
 <p><strong>UNDER CONSTRUCTION</strong></p>
 <table><thead><tr><td>   criterion   </td><td> Cartesian </td><td> Delta </td></tr></thead>
@@ -102,6 +95,31 @@ So this is more of a learning experience for us than creating the worlds most aw
 <tr><td> accuracy </td><td> </td><td> </td></tr>
 </table>
 <p><strong>UNDER CONSTRUCTION</strong></p>
+<h1>Materials</h1>
+<p>TODO</p>
+<h1>Shopping List</h1>
+<p>This is a list of all required physical items.</p>
+<table><thead><tr><td>                   Item name                       </td><td>   Purchase Price  </td><td>   Amount  </td></tr></thead>
+<tr><td> rod (linear bearing)                              </td><td>                   </td><td>           </td></tr>
+<tr><td> frame (profile bar)                               </td><td>                   </td><td>           </td></tr>
+<tr><td> engine                                            </td><td>                   </td><td>       4   </td></tr>
+<tr><td> cardan joint (delta)                              </td><td>                   </td><td>           </td></tr>
+<tr><td> hot end                                           </td><td>                   </td><td>           </td></tr>
+<tr><td> linear bearing                                    </td><td>                   </td><td>           </td></tr>
+<tr><td> belt incl. gear wheel                             </td><td>                   </td><td>           </td></tr>
+<tr><td> base plate (heated)                               </td><td>                   </td><td>           </td></tr>
+<tr><td> sensors                                           </td><td>                   </td><td>           </td></tr>
+<tr><td> Arduino                                           </td><td>                   </td><td>           </td></tr>
+<tr><td> engine controllers                                </td><td>                   </td><td>       4   </td></tr>
+<tr><td> power supply                                      </td><td>                   </td><td>           </td></tr>
+<tr><td> Raspberry Pi + SD card                            </td><td>                   </td><td>           </td></tr>
+<tr><td> acrylic glass (wall)                              </td><td>                   </td><td>           </td></tr>
+<tr><td> fan                                               </td><td>                   </td><td>           </td></tr>
+<tr><td> <a href="materials/filament.html">filament</a>               </td><td>                   </td><td>           </td></tr>
+<tr><td> cable                                             </td><td>                   </td><td>           </td></tr>
+<tr><td> bowden tube (delta)                               </td><td>                   </td><td>           </td></tr>
+<tr><td> screw                                             </td><td>                   </td><td>           </td></tr>
+</table>
 <h1>Filament</h1>
 <p>Mostly used materials are PLA and ABS.</p>
 <p>2 different diameters xxx and xxx.</p>
