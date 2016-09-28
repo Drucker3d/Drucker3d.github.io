@@ -9,3 +9,6 @@
 |reliability | Calibration has to be checked befor every print. (difficult) | Calibration has to be checked before every print. (easy) |
 | | Has to be calibrated often | Has to be calibrated seldom |
 |Calibration | Easy. Axis independent. | Difficult. Especailly the first calibration. Axis dependent. <br/>&emsp;&#8594; if one printer axis is false all cartesian axis are false |
+|Bugfix | Easy. Bugs can be easily located. | Difficult. Sometimes difficult to locate the source of error. (calibration/build) |
+|Printing Volume | cuboid | Cylinder respecively triangle |
+| Size | Big in the x- and y-axis. | Big in the z-axis. |
