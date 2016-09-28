@@ -12,3 +12,6 @@
 |Bugfix | Easy. Bugs can be easily located. | Difficult. Sometimes difficult to locate the source of error. (calibration/build) |
 |Printing Volume | cuboid | Cylinder respecively triangle |
 | Size | Big in the x- and y-axis. | Big in the z-axis. |
+|Slicer | Slicer programmed for cartesian printers | Uses the same software, which is not build for delat printers. |
+|Control| Eas control since axis are equal. | Control more complex. Trigonometric functions needed. |
+|Base | Moving in most builds <br/>&emsp;&#8594; problems with filigrane products <br/>&emsp;&#8594; no bowden tube needed | Only moved part is the hotend <br/>&emsp;&#8594; extruder mostly static. bowden tube needed <br/>&emsp;&#8594; problems may occure with some filaments |
