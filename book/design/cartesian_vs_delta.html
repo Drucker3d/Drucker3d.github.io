@@ -69,11 +69,19 @@
                 <div id="content" class="content">
                     <h1>Pro and contra list between a cartesian and a delta printer</h1>
 <p><strong>UNDER CONSTRUCTION</strong></p>
-<table><thead><tr><td>   criterion   </td><td> Cartesian </td><td> Delta </td></tr></thead>
+<table><thead><tr><td>   criteria </td><td> Cartesian    </td><td> Delta </td></tr></thead>
 <tr><td> velocity / acceleration </td><td> higher number of movable parts<br/> → high inertia<br/> → max v &amp; a is different for every axis </td><td> moved mass / number of movable parts small<br/> → small inertia<br/> → relatively high printing speed possible </td></tr>
-<tr><td> accuracy </td><td> </td><td> </td></tr>
+<tr><td> accuracy </td><td> Keine klare Aussage möglich. Scheint hauptsächlich von der Bauqualität und der Kalibrierung abzuhängen. </td><td> </td></tr>
+<tr><td> reliability </td><td> Calibration has to be checked befor every print. (difficult) </td><td> Calibration has to be checked before every print. (easy) </td></tr>
+<tr><td> </td><td> Has to be calibrated often </td><td> Has to be calibrated seldom </td></tr>
+<tr><td> Calibration </td><td> Easy. Axis independent. </td><td> Difficult. Especailly the first calibration. Axis dependent. <br/> → if one printer axis is false all cartesian axis are false </td></tr>
+<tr><td> Bugfix </td><td> Easy. Bugs can be easily located. </td><td> Difficult. Sometimes difficult to locate the source of error. (calibration/build) </td></tr>
+<tr><td> Printing Volume </td><td> cuboid </td><td> Cylinder respecively triangle </td></tr>
+<tr><td> Size </td><td> Big in the x- and y-axis. </td><td> Big in the z-axis. </td></tr>
+<tr><td> Slicer </td><td> Slicer programmed for cartesian printers </td><td> Uses the same software, which is not build for delat printers. </td></tr>
+<tr><td> Control</td><td> Eas control since axis are equal. </td><td> Control more complex. Trigonometric functions needed. </td></tr>
+<tr><td> Base </td><td> Moving in most builds <br/> → problems with filigrane products <br/> → no bowden tube needed </td><td> Only moved part is the hotend <br/> → extruder mostly static. bowden tube needed <br/> → problems may occure with some filaments </td></tr>
 </table>
-<p><strong>UNDER CONSTRUCTION</strong></p>
 
                 </div>
 
