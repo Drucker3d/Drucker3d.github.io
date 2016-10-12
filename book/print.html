@@ -47,7 +47,7 @@
         </script>
 
         <div id="sidebar" class="sidebar">
-            <ul class="chapter"><li><a href="project/description.html"><strong>1.</strong> Project</a></li><li><ul class="section"><li><a href="project/idea.html"><strong>1.1.</strong> Idea</a></li></ul></li><li><a href="design/design.html"><strong>2.</strong> Design</a></li><li><ul class="section"><li><a href="design/cartesian_vs_delta.html"><strong>2.1.</strong> Cartesian vs Delta</a></li></ul></li><li><a href="materials/materials.html"><strong>3.</strong> Materials</a></li><li><ul class="section"><li><a href="materials/shopping_list.html"><strong>3.1.</strong> Shopping List</a></li><li><a href="materials/filament.html"><strong>3.2.</strong> Filament</a></li></ul></li></ul>
+            <ul class="chapter"><li><a href="project/description.html"><strong>1.</strong> Project</a></li><li><ul class="section"><li><a href="project/idea.html"><strong>1.1.</strong> Idea</a></li></ul></li><li><a href="design/design.html"><strong>2.</strong> Design</a></li><li><ul class="section"><li><a href="design/native_vs_web.html"><strong>2.1.</strong> Native vs Web</a></li><li><a href="design/websocket.html"><strong>2.2.</strong> WebSocket</a></li><li><a href="design/cartesian_vs_delta.html"><strong>2.3.</strong> Cartesian vs Delta</a></li></ul></li><li><a href="materials/materials.html"><strong>3.</strong> Materials</a></li><li><ul class="section"><li><a href="materials/shopping_list.html"><strong>3.1.</strong> Shopping List</a></li><li><a href="materials/filament.html"><strong>3.2.</strong> Filament</a></li></ul></li></ul>
         </div>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -80,19 +80,26 @@ This leaves us with 2 Options:</p>
 <li>Use Cross-Platform Libraries for the Gui, ...</li>
 <li>Use a Website which allows the user to upload the file he/she wants to get printed</li>
 </ul>
-<p>We chose Option 2 because:</p>
-<ul>
-<li>Every OS should have an Browser to access the site <br/> → Every OS with a (modern) Browser may</li>
-<li>There is no need for backwards compatibility. <br/> → Admins must update the software on the pi once instead of updating the users software/force the user to update the software</li>
-</ul>
-<p>For a more detailed Reason see <a href="design/design.html">Design</a></p>
+<p>In the end we chose Option 2.</p>
+<p>For a detailed Reason see <a href="design/design.html">Design</a></p>
 <h1>Design</h1>
+<p>TODO</p>
+<h1>Native vs. Web</h1>
+<p>As described in <a href="project/idea.html">Idea</a> the 2 Options to create the Frontend for our 3d Printer to upload the files are either create a native application or create a web interface.</p>
+<p>We chose Option 2 because of multiple reasons.</p>
+<ol>
+<li>A native application must be backwards compatible. So we can't make breaking changes at the communication level. Because the Website will be hosted on the PI with the other programs, it is part of a unit. This will also allow us to test the whole PI better.</li>
+<li>We develop on multiple OS and we (may, if the 3d printer gets finished) print on different OS. With the decision to make a website we change the os compatibility problem to browser compatibility problem.</li>
+</ol>
+<p>With the upcomming <a href="https://en.wikipedia.org/wiki/WebAssembly">wasm</a> standard, we may be able to <a href="todo/todo">slice</a> in the browser and send the sliced file instead of slicing on the PI.</p>
+<p>If -in the future- we choose to build an native application, the application can connect to the same <a href="design/websocket.html">WebSocket</a> the website is using.</p>
+<h1>WebSocket</h1>
 <p>TODO</p>
 <h1>Pro and contra list between a cartesian and a delta printer</h1>
 <p><strong>UNDER CONSTRUCTION</strong></p>
 <table><thead><tr><td>   criteria </td><td> Cartesian    </td><td> Delta </td></tr></thead>
 <tr><td> velocity / acceleration </td><td> higher number of movable parts<br/> → high inertia<br/> → max v &amp; a is different for every axis </td><td> moved mass / number of movable parts small<br/> → small inertia<br/> → relatively high printing speed possible </td></tr>
-<tr><td> accuracy </td><td> Keine klare Aussage möglich. Scheint hauptsächlich von der Bauqualität und der Kalibrierung abzuhängen. </td><td> </td></tr>
+<tr><td> accuracy </td><td>  Depends on the construction quality and the calibration </td><td> Depends on the construction quality and the calibration </td></tr>
 <tr><td> reliability </td><td> Calibration has to be checked befor every print. (difficult) </td><td> Calibration has to be checked before every print. (easy) </td></tr>
 <tr><td> </td><td> Has to be calibrated often </td><td> Has to be calibrated seldom </td></tr>
 <tr><td> Calibration </td><td> Easy. Axis independent. </td><td> Difficult. Especailly the first calibration. Axis dependent. <br/> → if one printer axis is false all cartesian axis are false </td></tr>

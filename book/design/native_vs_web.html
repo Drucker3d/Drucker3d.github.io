@@ -47,7 +47,7 @@
         </script>
 
         <div id="sidebar" class="sidebar">
-            <ul class="chapter"><li><a href="project/description.html"><strong>1.</strong> Project</a></li><li><ul class="section"><li><a href="project/idea.html"><strong>1.1.</strong> Idea</a></li></ul></li><li><a href="design/design.html" class="active"><strong>2.</strong> Design</a></li><li><ul class="section"><li><a href="design/native_vs_web.html"><strong>2.1.</strong> Native vs Web</a></li><li><a href="design/websocket.html"><strong>2.2.</strong> WebSocket</a></li><li><a href="design/cartesian_vs_delta.html"><strong>2.3.</strong> Cartesian vs Delta</a></li></ul></li><li><a href="materials/materials.html"><strong>3.</strong> Materials</a></li><li><ul class="section"><li><a href="materials/shopping_list.html"><strong>3.1.</strong> Shopping List</a></li><li><a href="materials/filament.html"><strong>3.2.</strong> Filament</a></li></ul></li></ul>
+            <ul class="chapter"><li><a href="project/description.html"><strong>1.</strong> Project</a></li><li><ul class="section"><li><a href="project/idea.html"><strong>1.1.</strong> Idea</a></li></ul></li><li><a href="design/design.html"><strong>2.</strong> Design</a></li><li><ul class="section"><li><a href="design/native_vs_web.html" class="active"><strong>2.1.</strong> Native vs Web</a></li><li><a href="design/websocket.html"><strong>2.2.</strong> WebSocket</a></li><li><a href="design/cartesian_vs_delta.html"><strong>2.3.</strong> Cartesian vs Delta</a></li></ul></li><li><a href="materials/materials.html"><strong>3.</strong> Materials</a></li><li><ul class="section"><li><a href="materials/shopping_list.html"><strong>3.1.</strong> Shopping List</a></li><li><a href="materials/filament.html"><strong>3.2.</strong> Filament</a></li></ul></li></ul>
         </div>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -67,20 +67,27 @@
                 </div>
 
                 <div id="content" class="content">
-                    <h1>Design</h1>
-<p>TODO</p>
+                    <h1>Native vs. Web</h1>
+<p>As described in <a href="project/idea.html">Idea</a> the 2 Options to create the Frontend for our 3d Printer to upload the files are either create a native application or create a web interface.</p>
+<p>We chose Option 2 because of multiple reasons.</p>
+<ol>
+<li>A native application must be backwards compatible. So we can't make breaking changes at the communication level. Because the Website will be hosted on the PI with the other programs, it is part of a unit. This will also allow us to test the whole PI better.</li>
+<li>We develop on multiple OS and we (may, if the 3d printer gets finished) print on different OS. With the decision to make a website we change the os compatibility problem to browser compatibility problem.</li>
+</ol>
+<p>With the upcomming <a href="https://en.wikipedia.org/wiki/WebAssembly">wasm</a> standard, we may be able to <a href="todo/todo">slice</a> in the browser and send the sliced file instead of slicing on the PI.</p>
+<p>If -in the future- we choose to build an native application, the application can connect to the same <a href="design/websocket.html">WebSocket</a> the website is using.</p>
 
                 </div>
 
                 <!-- Mobile navigation buttons -->
                 
-                    <a href="project/idea.html" class="mobile-nav-chapters previous">
+                    <a href="design/design.html" class="mobile-nav-chapters previous">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a href="design/native_vs_web.html" class="mobile-nav-chapters next">
+                    <a href="design/websocket.html" class="mobile-nav-chapters next">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
@@ -88,13 +95,13 @@
             </div>
 
             
-                <a href="project/idea.html" class="nav-chapters previous" title="You can navigate through the chapters using the arrow keys">
+                <a href="design/design.html" class="nav-chapters previous" title="You can navigate through the chapters using the arrow keys">
                     <i class="fa fa-angle-left"></i>
                 </a>
             
 
             
-                <a href="design/native_vs_web.html" class="nav-chapters next" title="You can navigate through the chapters using the arrow keys">
+                <a href="design/websocket.html" class="nav-chapters next" title="You can navigate through the chapters using the arrow keys">
                     <i class="fa fa-angle-right"></i>
                 </a>
             
